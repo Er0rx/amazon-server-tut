@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:amazon_clone_tutorial/common/widgets/bottom_bar.dart';
-import 'package:amazon_clone_tutorial/features/home/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:amazon_clone_tutorial/providers/user_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';

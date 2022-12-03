@@ -8,7 +8,7 @@ const adminRouter = require('./routes/admin.js');
 const userRouter = require('./routes/user.js');
 
 // Init
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const DB = "mongodb+srv://Ema:slammine@cluster0.56scdqv.mongodb.net/?retryWrites=true&w=majority"
 // MiddleWare

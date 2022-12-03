@@ -60,12 +60,9 @@ userRouter.delete('/api/remove-from-cart/:id', auth, async (req, res) => {
 // Save User Address
 userRouter.post('/api/save-user-address', auth, async (req, res) => {
     try {
-        console.log('address: ' + address)
         const {address} = req.body;
-        console.log('init address: ' + user.address);
         let user = await User.findById(req.user);
         user.address = address;
-        console.log('after address: ' + user.address);
         user = await user.save();
         res.json(user);
     } catch (e) {
@@ -112,7 +109,6 @@ userRouter.post('/api/order', auth, async (req, res) => {
 userRouter.get('/api/orders/me', auth, async (req, res) => {
     try {
         const orders = await Order.find({userId: req.user});
-        console.log(orders);
         res.json(orders);
     } catch (e) {
         res.status(500).json({error: e.message});
